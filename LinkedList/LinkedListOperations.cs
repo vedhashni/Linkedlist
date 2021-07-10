@@ -9,6 +9,7 @@ namespace LinkedList
     /// <summary>
     /// UC1 - Inserting the node at last and displaying the linked list
     /// UC2 - Inserting the node at front
+    /// UC3 - Appending 
     /// </summary>
     class LinkedListOperations
     {
