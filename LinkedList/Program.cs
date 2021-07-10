@@ -24,6 +24,14 @@ namespace LinkedList
                     Llist.Display();
                     break;
 
+                //Inserting node at front
+                case 2:
+                    Llist.InsertFront(56);
+                    Llist.InsertFront(30);
+                    Llist.InsertFront(70);
+                    Llist.Display();
+                    break;
+
                 default:
                     break;
             }

@@ -8,6 +8,7 @@ namespace LinkedList
 {
     /// <summary>
     /// UC1 - Inserting the node at last and displaying the linked list
+    /// UC2 - Inserting the node at front
     /// </summary>
     class LinkedListOperations
     {
@@ -26,7 +27,15 @@ namespace LinkedList
                 NodeFields lastNode = GetLastNode();
                 lastNode.next = new_node;
             }
-            Console.WriteLine("Inserted into list " + new_node.data);
+            Console.WriteLine("Inserted last into list " + new_node.data);
+        }
+
+        public void InsertFront(int new_data)
+        {
+            NodeFields new_node = new NodeFields(new_data);
+            new_node.next = this.head;
+            this.head = new_node;
+            Console.WriteLine("Inserted front into list " + new_node.data);
         }
 
         public NodeFields GetLastNode()
