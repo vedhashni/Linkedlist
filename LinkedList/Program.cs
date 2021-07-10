@@ -39,6 +39,15 @@ namespace LinkedList
                     Llist.InsertBetween(2, 30);
                     Llist.Display();
                     break;
+                
+                //Deleting the node at first
+                case 4:
+                    Llist.InsertFront(56);
+                    Llist.InsertFront(30);
+                    Llist.InsertFront(70);
+                    Llist.DeleteFirst();
+                    Llist.Display();
+                    break;
 
                 default:
                     break;

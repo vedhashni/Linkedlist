@@ -11,6 +11,7 @@ namespace LinkedList
     /// UC2 - Inserting the node at front
     /// UC3 - Appending 
     /// UC4 - Insert at middle
+    /// UC5 - Deleting the node at first
     /// </summary>
     class LinkedListOperations
     {
@@ -72,6 +73,19 @@ namespace LinkedList
                 }
             }
         }
+
+        //Deleting the node at first
+
+        public NodeFields DeleteFirst()
+        {
+            if (this.head == null)
+            {
+                return null;
+            }
+            this.head = this.head.next;
+            return this.head;
+        }
+
 
         public NodeFields GetLastNode()
         {
