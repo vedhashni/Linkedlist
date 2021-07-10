@@ -49,6 +49,15 @@ namespace LinkedList
                     Llist.Display();
                     break;
 
+                //Deleting the last node
+                case 5:
+                    Llist.InsertLast(56);
+                    Llist.InsertLast(30);
+                    Llist.InsertLast(70);
+                    Llist.DeleteLast();
+                    Llist.Display();
+                    break;
+
                 default:
                     break;
             }

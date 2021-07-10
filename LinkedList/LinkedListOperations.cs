@@ -12,6 +12,7 @@ namespace LinkedList
     /// UC3 - Appending 
     /// UC4 - Insert at middle
     /// UC5 - Deleting the node at first
+    /// UC6 - Deleting the node at last
     /// </summary>
     class LinkedListOperations
     {
@@ -86,6 +87,28 @@ namespace LinkedList
             return this.head;
         }
 
+        //Deleting the last node
+
+        public NodeFields DeleteLast()
+        {
+            NodeFields newnode = this.head;
+            if (this.head == null)
+            {
+                return null;
+            }
+            if (this.head.next == null)
+            {
+                this.head = null;
+                return null;
+            }
+            while (newnode.next.next != null)
+            {
+                newnode = newnode.next;
+            }
+            newnode.next = null;
+            return newnode;
+
+        }
 
         public NodeFields GetLastNode()
         {
