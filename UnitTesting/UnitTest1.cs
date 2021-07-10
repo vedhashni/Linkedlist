@@ -12,13 +12,14 @@ namespace UnitTesting
         [TestMethod]
             public void TestSearchMethod()
             {
-                list.InsertLast(70);
-                list.InsertLast(30);
-                list.InsertLast(56);
-                int actualValue = list.Search(30);
-                int expectedValue = 30;
-                Assert.AreEqual(expectedValue, actualValue);
-            }
+                
+            list.InsertLast(56);
+            list.InsertLast(30);
+            list.InsertLast(70);
+            int actual = list.InsertMiddle(30, 40);
+            int expected = 40;
+            Assert.AreEqual(expected, actual);
+        }
         }
     }
 }

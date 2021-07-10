@@ -66,6 +66,15 @@ namespace LinkedList
                     Llist.Search(56);
                     break;
 
+                //Search and insert the node
+                case 7:
+                    Llist.InsertLast(56);
+                    Llist.InsertLast(30);
+                    Llist.InsertLast(70);
+                    Llist.InsertMiddle(30, 40);
+                    Llist.Display();
+                    break;
+
                 default:
                     break;
             }
