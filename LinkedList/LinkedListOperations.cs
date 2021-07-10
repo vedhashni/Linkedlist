@@ -15,6 +15,7 @@ namespace LinkedList
     /// UC6 - Deleting the node at last
     /// UC7 - Search
     /// UC8 - Search and insert node
+    /// UC9 - Search and delete node
     /// </summary>
     public class LinkedListOperations
     {
@@ -121,6 +122,27 @@ namespace LinkedList
             temp.next = newNode;
             return (newNode.data);
 
+        }
+
+        //Search and delete node
+        public int DeleteBetween(int data)
+        {
+            NodeFields temp = Search(data);
+            Console.WriteLine("Data {0} has been deleted from linked list", temp.data);
+            temp.next = temp.next.next;
+            int sizeofList = Size();
+            return sizeofList;
+        }
+        public int Size()
+        {
+            int count = 0;
+            NodeFields temp = this.head;
+            while (temp != null)
+            {
+                count++;
+                temp = temp.next;
+            }
+            return count;
         }
 
         //For Searching

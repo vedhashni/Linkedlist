@@ -75,6 +75,18 @@ namespace LinkedList
                     Llist.Display();
                     break;
 
+
+                //Search and delete the node
+                case 8:
+                    Llist.InsertFront(70);
+                    Llist.InsertFront(40);
+                    Llist.InsertFront(30);
+                    Llist.InsertFront(56);
+                    Llist.Display();
+                    Llist.DeleteBetween(40);
+                    Llist.Display();
+                    break;
+
                 default:
                     break;
             }
