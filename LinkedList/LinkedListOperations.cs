@@ -10,6 +10,7 @@ namespace LinkedList
     /// UC1 - Inserting the node at last and displaying the linked list
     /// UC2 - Inserting the node at front
     /// UC3 - Appending 
+    /// UC4 - Insert at middle
     /// </summary>
     class LinkedListOperations
     {
@@ -18,25 +19,58 @@ namespace LinkedList
         //Creating a method to insert last 
         public void InsertLast(int new_data)
         {
-            NodeFields new_node = new NodeFields(new_data);
+            NodeFields newnode = new NodeFields(new_data);
             if (this.head == null)
             {
-                this.head = new_node;
+                this.head = newnode;
             }
             else
             {
                 NodeFields lastNode = GetLastNode();
-                lastNode.next = new_node;
+                lastNode.next = newnode;
             }
-            Console.WriteLine("Inserted last into list " + new_node.data);
+            Console.WriteLine("Inserted last into list " + newnode.data);
         }
 
+        //Insering at last
         public void InsertFront(int new_data)
         {
-            NodeFields new_node = new NodeFields(new_data);
-            new_node.next = this.head;
-            this.head = new_node;
-            Console.WriteLine("Inserted front into list " + new_node.data);
+            NodeFields newnode = new NodeFields(new_data);
+            newnode.next = this.head;
+            this.head = newnode;
+            Console.WriteLine("Inserted front into list " + newnode.data);
+        }
+
+        //Inserting the node at middle
+        public void InsertBetween(int pos, int new_data)
+        {
+            NodeFields newnode = new NodeFields(new_data);
+            if (pos == 1)
+            {
+                newnode.next = this.head;
+                head = newnode;
+            }
+            else if (pos <= 0)
+            {
+                Console.WriteLine("Invalid Position!!!");
+            }
+            else if (pos > 0)
+            {
+                NodeFields temp = head;
+                while (pos != 0)
+                {
+                    if (pos == 2)
+                    {
+                        Console.WriteLine("After insertion performed between tow nodes");
+                        newnode.next = temp.next;
+                        temp.next = newnode;
+                        break;
+                    }
+                    temp = temp.next;
+                    Console.WriteLine(pos);
+                    pos--;
+                }
+            }
         }
 
         public NodeFields GetLastNode()

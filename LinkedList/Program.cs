@@ -31,6 +31,14 @@ namespace LinkedList
                     Llist.InsertFront(70);
                     Llist.Display();
                     break;
+               
+                //Inserting the node at middle
+                case 3:
+                    Llist.InsertLast(56);
+                    Llist.InsertLast(70);
+                    Llist.InsertBetween(2, 30);
+                    Llist.Display();
+                    break;
 
                 default:
                     break;
