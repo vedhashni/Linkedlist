@@ -16,6 +16,7 @@ namespace LinkedList
     /// UC7 - Search
     /// UC8 - Search and insert node
     /// UC9 - Search and delete node
+    /// UC10 - Sorting
     /// </summary>
     public class LinkedListOperations
     {
@@ -143,6 +144,25 @@ namespace LinkedList
                 temp = temp.next;
             }
             return count;
+        }
+
+        //Sorting
+        public void Sort()
+        {
+            NodeFields i, j;
+            int temp;
+            for (i = this.head; i.next != null; i = i.next)
+            {
+                for (j = i.next; j != null; j = j.next)
+                {
+                    if (i.data > j.data)
+                    {
+                        temp = i.data;
+                        i.data = j.data;
+                        j.data = temp;
+                    }
+                }
+            }
         }
 
         //For Searching
