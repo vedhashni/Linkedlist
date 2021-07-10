@@ -13,8 +13,9 @@ namespace LinkedList
     /// UC4 - Insert at middle
     /// UC5 - Deleting the node at first
     /// UC6 - Deleting the node at last
+    /// UC7 - Search
     /// </summary>
-    class LinkedListOperations
+    public class LinkedListOperations
     {
         //Creating a head node to point the first element
         public NodeFields head;
@@ -108,6 +109,24 @@ namespace LinkedList
             newnode.next = null;
             return newnode;
 
+        }
+
+        //For Searching
+        public int Search(int value)
+        {
+            NodeFields temp = this.head;
+            while (temp != null)
+            {
+                if (temp.data == value)
+                {
+                    Console.WriteLine("Element found.. " + value);
+                    return value;
+                }
+                temp = temp.next;
+
+            }
+            Console.WriteLine("Element not found!!!!!!!!");
+            return value;
         }
 
         public NodeFields GetLastNode()

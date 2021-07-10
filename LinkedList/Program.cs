@@ -58,6 +58,14 @@ namespace LinkedList
                     Llist.Display();
                     break;
 
+                //Searching
+                case 6:
+                    Llist.InsertLast(56);
+                    Llist.InsertLast(30);
+                    Llist.InsertLast(70);
+                    Llist.Search(56);
+                    break;
+
                 default:
                     break;
             }
